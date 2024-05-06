@@ -1,25 +1,31 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
   palette: {
-    primary: {
-      main: '#ff4757',
-    },
-    secondary: {
-      main: '#1e90ff',
-    },
-  },
-  typography: {
-    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
-    button: {
-      textTransform: 'none',
-    },
+    mode: "dark",
   },
   components: {
-    MuiButton: {
+    MuiTextField: {
       styleOverrides: {
         root: {
-          borderRadius: 8,
+          "& label": {
+            color: "white",
+          },
+          "& input": {
+            color: "white",
+            backgroundColor: "black",
+          },
+          "& .MuiOutlinedInput-root": {
+            "& fieldset": {
+              borderColor: "white",
+            },
+            "&:hover fieldset": {
+              borderColor: "white",
+            },
+            "&.Mui-focused fieldset": {
+              borderColor: "white",
+            },
+          },
         },
       },
     },

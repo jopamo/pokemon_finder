@@ -1,22 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { CssBaseline, ThemeProvider } from '@mui/material';
-import App from './App';
-import theme from './theme/theme';
-
-const rootStyle = {
-  height: '100vh',
-  background: 'url("/pokemon.jpg") center / cover no-repeat'
-};
+import React from "react";
+import ReactDOM from "react-dom";
+import { ThemeProvider } from "@mui/material/styles";
+import App from "./App";
+import theme from "./theme/theme";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <div style={rootStyle}>
-        <App />
-      </div>
-    </ThemeProvider>
-  </React.StrictMode>,
-  document.getElementById('root')
+  <ThemeProvider theme={theme}>
+    <App />
+  </ThemeProvider>,
+  document.getElementById("root"),
 );
