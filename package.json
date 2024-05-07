@@ -9,17 +9,13 @@
     "@mui/icons-material": "^5.15.16",
     "@mui/lab": "^5.0.0-alpha.170",
     "@mui/material": "^5.15.16",
-    "@testing-library/jest-dom": "^6.4.5",
-    "@testing-library/react": "^15.0.6",
-    "@testing-library/user-event": "^14.5.2",
     "axios": "^1.6.8",
     "lodash.debounce": "^4.0.8",
     "prettier-check": "^2.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1",
-    "redis": "^4.6.13",
-    "web-vitals": "^3.5.2"
+    "react-scripts": "^5.0.1",
+    "redis": "^4.6.13"
   },
   "scripts": {
     "start": "react-scripts start",
