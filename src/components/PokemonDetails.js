@@ -16,6 +16,17 @@ import {
 import axios from "axios";
 import _ from "lodash";
 
+function convertHeightToFeetInches(decimeters) {
+  const feet = decimeters * 0.328084;
+  const wholeFeet = Math.floor(feet);
+  const inches = Math.round((feet - wholeFeet) * 12);
+  return `${wholeFeet}' ${inches}"`;
+}
+
+function convertWeightToPounds(hectograms) {
+  return Math.round(hectograms * 0.220462);
+}
+
 const fetchPokemonDetails = async (search) => {
   try {
     const response = await axios.get(
@@ -173,7 +184,7 @@ const PokemonDetails = ({ searchTerm }) => {
           <Avatar
             src={officialArtwork}
             alt={`${pokemon.name} official artwork`}
-            sx={{ width: 100, height: 100 }}
+            sx={{ width: 200, height: 200 }}
           />
         </Box>
         <Box
@@ -194,6 +205,31 @@ const PokemonDetails = ({ searchTerm }) => {
             />
           ))}
         </Box>
+        <Grid container spacing={2} sx={{ mt: 2, justifyContent: "center" }}>
+          <Grid item xs={6}>
+            <Typography
+              variant="subtitle1"
+              sx={{
+                color: theme.palette.text.primary,
+                textAlign: "center",
+              }}
+            >
+              Height: {convertHeightToFeetInches(pokemon.height)}
+            </Typography>
+          </Grid>
+          <Grid item xs={6}>
+            <Typography
+              variant="subtitle1"
+              sx={{
+                color: theme.palette.text.primary,
+                textAlign: "center",
+              }}
+            >
+              Weight: {convertWeightToPounds(pokemon.weight)} lbs
+            </Typography>
+          </Grid>
+        </Grid>
+
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <Typography
