@@ -1,4 +1,5 @@
 # Pokemon Finder
+https://1g4.org/pokemon/
 
 ## Introduction
 Pokemon Finder is a web application that allows users to search and explore various Pokémon, their abilities, moves, and stats. This tool is designed for Pokémon enthusiasts who want quick access to detailed information about their favorite creatures.
@@ -11,7 +12,7 @@ To run Pokemon Finder locally, follow these simple steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/pokemon-finder.git
+   git clone https://github.com/jopamo/pokemon_finder.git
    ```
 2. Navigate to the project directory:
    ```bash
